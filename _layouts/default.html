@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<link rel="icon" href="{{ "/assets/images/icons/icon.ico" | relative_url }}" type="image/x-icon" />
+<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+<meta charset="{{ site.encoding }}">
+<meta name="theme-color" content="#18181d"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo %}
+<link rel="manifest" href="manifest.json">
+{% if site.show_frame %}
+<link async rel="stylesheet" href="{{ "/assets/css/frame.css" | relative_url }}">
+{% else %}
+<link async rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
+{% endif %}
+<style>
+*{
+  box-sizing: border-box;
+}
+</style>
+{% if site.plugins contains "jekyll-feed" %}<link rel="alternate" href="{{ site.feed.path | default: "/feed.xml" | relative_url }}" type="application/atom+xml" title="{{ site.title }}">{% endif %}
+{% if site.comments.disqus_shortname and page.layout == "post" %}<script src="//{{ site.comments.disqus_shortname }}.disqus.com/embed.js" async></script>{% endif %}
+{% if site.comments.isso_domain and page.layout == "post" %}<script data-isso="http://{{ site.comments.isso_domain }}" src="//{{ site.comments.isso_domain }}/js/embed.min.js"></script>{% endif %}
+{% if site.show_sidebar or site.sidebar %}{% include sidebar.html %}{% endif %}
+
+{% if site.navigation %}
+  {% assign pages = site.navigation %}
+{% else %}
+  {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
+{% endif %}
+
+<header>
+  <a href="{{ "/" | relative_url }}" class="title"><img alt="{{ site.title | escape }}" src="{{ "/assets/images/icons/icon.png" | relative_url }}" width="72px"></a>
+  {% include menu.html menu=pages %}
+</header>
+
+{{ content }}
+
+{% if site.external %}
+<footer>
+  <div>{{ site.description | default: site.title }}</div>
+  {% include menu.html menu=site.external %}
+</footer>
+{% endif %}
+
+</html>

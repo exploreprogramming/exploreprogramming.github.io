@@ -1,0 +1,41 @@
+title: "Coding Room"
+author: "Badal Kumar"
+description: "Happy Learning!"
+permalink: /:title/
+lang: "en"
+excerpt_separator: "<!-- Read More -->"
+date_format: "%B %d, %Y"
+
+# Layout
+
+show_excerpts: true        # show article excerpts on the home page
+show_frame: true           # adds a gray frame to the site
+show_sidebar: false        # show a sidebar instead of the usual header
+minimal: false             # use a dark header
+
+# Menu
+
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {file: "index.html", title: Home}
+  - {file: "archive.html", title: Archive}
+  - {file: "about.html", title: About}
+  - {file: "search.html", icon: search, title: About}
+
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "mailto:thebadalkumar@zohomail.in"}
+  - {title: Github, icon: github, url: "https://github.com/thebadalkumar/"}
+  - {title: Linkedin, icon: linkedin, url: "https://linkedin.com/in/thebadalkumar/"}
+
+comments:
+#  disqus_shortname: ""    # see https://disqus.com/
+#  isso_domain: ""         # see https://posativ.org/isso/
+
+url: "" # the base hostname & protocol for your site
+host: "0.0.0.0"
+plugins:
+ - jekyll-seo-tag
+ - jekyll-feed
+ - jekyll-paginate
+ - jekyll-sitemap
+
+paginate: 5
