@@ -1,6 +1,6 @@
 title: "Coding Room"
 author: "Badal Kumar"
-description: "Happy Learning!"
+description: "Learn, Innovate and Create."
 permalink: /:title/
 lang: "en"
 excerpt_separator: "<!-- Read More -->"
@@ -17,14 +17,14 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html", title: Home}
-  - {file: "archive.html", title: Archive}
   - {file: "about.html", title: About}
   - {file: "search.html", icon: search, title: About}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:thebadalkumar@zohomail.in"}
-  - {title: Github, icon: github, url: "https://github.com/thebadalkumar/"}
   - {title: Linkedin, icon: linkedin, url: "https://linkedin.com/in/thebadalkumar/"}
+  - {title: Website, icon: globe, url: "https://me.codingroom.in/"}
+  - {title: Github, icon: github, url: "https://github.com/thebadalkumar/"}
+  - {title: Mail, icon: envelope, url: "mailto:thebadalkumar@zohomail.in"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
