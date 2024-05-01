@@ -21,10 +21,11 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "about.html", title: About}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Linkedin, icon: linkedin, url: "https://linkedin.com/in/thebadalkumar/"}
-  - {title: Website, icon: globe, url: "https://me.codingroom.in/"}
-  - {title: Github, icon: github, url: "https://github.com/thebadalkumar/"}
-  - {title: Mail, icon: envelope, url: "mailto:thebadalkumar@zohomail.in"}
+  - {title: Mail, icon: envelope, url: "mailto:admin@codingroom.in"}
+  - {title: Linkedin, icon: linkedin, url: "https://www.linkedin.com/company/roomofcode/"}
+  - {title: Twitter, icon: twitter, url: "https://twitter.com/roomofcode/"}
+  - {title: Facebook, icon: facebook, url: "https://www.facebook.com/roomofcode/"}
+  - {title: Instagram, icon: instagram, url: "https://www.instagram.com/roomofcode/"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
