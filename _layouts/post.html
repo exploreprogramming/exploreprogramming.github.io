@@ -6,11 +6,11 @@ layout: default
   {% include meta.html post=page %}
   {{ content }}
   
-  Happy coding!
-
-  <hr>
-
+  <p>Happy coding!</p>
   {% include share.html %}
+  <hr>
+  {% include subscribe.html %}
+
   {% if page.comments != false and site.comments.isso or site.comments.disqus %}
     <hr>
     {% if site.comments.isso_domain %}<div id="isso-thread"></div>{% endif %}

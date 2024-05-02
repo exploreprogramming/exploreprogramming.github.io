@@ -11,6 +11,8 @@
         border: 1px solid grey;
         float: left;
         width: 80%;
+        border: none;
+        outline: none;
         background: #f1f1f1;
     }
 
@@ -21,8 +23,8 @@
         background: #2196F3;
         color: white;
         font-size: 17px;
-        border: 1px solid grey;
-        border-left: none;
+        border: none;
+        outline: none;
         cursor: pointer;
     }
 
@@ -38,7 +40,7 @@
 </style>
 <div class="container">
     <form class="example" action="/search" method="get" style="margin:auto;max-width:500px">
-        <input type="text" id="search-box" placeholder="Search.." name="query">
+        <input type="text" id="search-box" placeholder="Search..." name="query" autocomplete="off" required>
         <button type="submit">Go</button>
     </form>
 </div>
