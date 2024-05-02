@@ -22,9 +22,9 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:admin@codingroom.in"}
+  - {title: Youtube, icon: youtube, url: "https://www.youtube.com/@codingroom_"}
   - {title: Linkedin, icon: linkedin, url: "https://www.linkedin.com/company/roomofcode/"}
   - {title: Twitter, icon: twitter, url: "https://twitter.com/roomofcode/"}
-  - {title: Facebook, icon: facebook, url: "https://www.facebook.com/roomofcode/"}
   - {title: Instagram, icon: instagram, url: "https://www.instagram.com/roomofcode/"}
 
 comments:
