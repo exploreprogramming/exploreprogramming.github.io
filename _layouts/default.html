@@ -28,6 +28,12 @@
 *{
   box-sizing: border-box;
 }
+html { scroll-behavior: smooth; } 
+.new-f{
+  padding-top: 0px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 0 0;
+}
 </style>
 {% if site.plugins contains "jekyll-feed" %}<link rel="alternate" href="{{ site.feed.path | default: "/feed.xml" | relative_url }}" type="application/atom+xml" title="{{ site.title }}">{% endif %}
 </head>
@@ -48,9 +54,14 @@
 
 {% if site.external %}
 <footer>
-  <div>{{ site.description | default: site.title }}</div>
   {% include menu.html menu=site.external %}
 </footer>
 {% endif %}
-
+<footer class="new-f">
+  <div>{{ site.description | default: site.title }}</div>
+  <nav>
+  <a href="/privacy/">Privacy</a>
+  <a href="/about/">About</a>
+  </nav>
+</footer>
 </html>

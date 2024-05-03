@@ -1,5 +1,23 @@
+<style>
+.post-tag::before {
+  content: "#";
+}
+
+.post-tag {
+  font-size: 0.75rem;
+  border: 1px solid #09be5a;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0px 3px;
+  margin-right: 4px;
+}
+</style>
 <header>
   <h1><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h1>
-  {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
-  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: date_format }}</time>
+  {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}<p><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: date_format }}</time></p>
+  {%- if page.categories.size > 0 -%}
+    {%- for tag in page.categories -%}
+    <span class="post-tag"><a href=/categories#{{tag}}>{{ tag | capitalize }}</a></span>
+    {%- endfor -%}
+    {%- endif -%}
 </header>
