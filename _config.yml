@@ -5,7 +5,6 @@ image: "/assets/images/icons/logo.png"
 permalink: /:title/
 lang: "en"
 # excerpt_separator: "<!-- Read More -->"
-date_format: "%B %d, %Y"
 
 # Layout
 
