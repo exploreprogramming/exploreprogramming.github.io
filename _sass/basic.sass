@@ -11,20 +11,6 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-@media (prefers-color-scheme: dark)
-  body
-    background: $dark
-    color: $light
-
-h1, h2, h3, h4, h5, h6
-  font-weight: $heading-weight
-
-b, strong, th
-  font-weight: $font-weight + 200
-
-p
-  text-align: justify
-
 a
   color: $link-color
   text-decoration: inherit
@@ -36,6 +22,28 @@ header a, footer a, aside a
 
 header time
   color: #555558
+
+@media (prefers-color-scheme: dark)
+  body
+    background: $dark
+    color: $light
+  a
+    color: $link-color-dark
+  .more a
+    border: 1.5px solid $link-color-dark
+  .more a:hover
+    background: $link-color-dark
+  header time
+    color: $time-dark
+
+h1, h2, h3, h4, h5, h6
+  font-weight: $heading-weight
+
+b, strong, th
+  font-weight: $font-weight + 200
+
+p
+  text-align: justify
 
 hr
   border: 1px solid reduce(30)
