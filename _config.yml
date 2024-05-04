@@ -1,6 +1,7 @@
 title: "Coding Room"
 author: "Badal Kumar"
-description: "Coding Room"
+description: "Coding Room is a dedicated platform designed to provide comprehensive coding tutorials and resources for learners of all levels. Our mission is to make coding accessible and enjoyable for everyone, regardless of their background or experience level."
+image: "/assets/images/icons/logo.png"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "<!-- Read More -->"

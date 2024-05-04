@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Why You Should Choose Python in 2024
+description: Python has been steadily gaining popularity over the years, and in 2024, it continues to be one of the top programming languages of choice for developers worldwide.
+image: /assets/images/photos/python-banner.png
 category: [python, programming language]
 ---
 
