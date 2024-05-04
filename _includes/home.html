@@ -1,6 +1,6 @@
 {%- assign posts = paginator.posts | default: site.posts -%} {% for post in posts %}
 <article>
-    {% include meta.html post=post preview=true %} {{ post.excerpt }}
+    {% include meta.html post=post preview=true %} {{ post.description }}
     <div class="more"><a href="{{ post.url | relative_url }}">Continue Reading</a></div>
 </article>
 {% endfor %} {% if paginator.total_pages > 1 %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mastering SSH from Beginner to Advanced
-description: SSH, or Secure Shell, is a cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network services between two networked computers.
+description: Welcome to our comprehensive guide to SSH! Whether you’re just starting out or looking to delve into advanced techniques, this post has you covered. We’ll cover everything from basic installation to advanced port configurations.
 image: /assets/images/photos/ssh.png
 category: [linux, ssh, shell]
 ---

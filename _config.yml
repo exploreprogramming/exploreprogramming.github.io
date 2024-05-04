@@ -4,12 +4,12 @@ description: "Coding Room is a dedicated platform designed to provide comprehens
 image: "/assets/images/icons/logo.png"
 permalink: /:title/
 lang: "en"
-excerpt_separator: "<!-- Read More -->"
+# excerpt_separator: "<!-- Read More -->"
 date_format: "%B %d, %Y"
 
 # Layout
 
-show_excerpts: true        # show article excerpts on the home page
+show_excerpts: false        # show article excerpts on the home page
 show_frame: true           # adds a gray frame to the site
 show_sidebar: false        # show a sidebar instead of the usual header
 minimal: false             # use a dark header
