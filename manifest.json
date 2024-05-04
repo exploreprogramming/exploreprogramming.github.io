@@ -7,8 +7,14 @@
     "display": "standalone",
     "description": "Developer blog sharing ideas and smart solutions to others",
     "icons": [{
-        "src": "/assets/images/icons/icon.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-    }]
+            "src": "/assets/images/icons/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        },
+        {
+            "src": "/assets/images/icons/dp.png",
+            "sizes": "500x500",
+            "type": "image/png"
+        }
+    ]
 }

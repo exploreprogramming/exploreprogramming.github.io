@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 <head>
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCJ5X4KE7L"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-RCJ5X4KE7L');
 </script>
-
 <link rel="icon" href="{{ "/assets/images/icons/icon.ico" | relative_url }}" type="image/x-icon" />
 <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
 <meta charset="{{ site.encoding }}">
@@ -29,8 +26,10 @@
 *{
   box-sizing: border-box;
 }
-html { scroll-behavior: smooth; } 
-.thm-tog:hover{
+html {
+  scroll-behavior: smooth;
+}
+.theme-toggle:hover{
   text-decoration: none;
 }
 #icon-sun {
@@ -38,7 +37,6 @@ html { scroll-behavior: smooth; }
   height: 1.5rem;
   display: none;
 }
-
 #icon-moon {
   width: 1.5rem;
   height: 1.5rem;
@@ -53,20 +51,16 @@ html { scroll-behavior: smooth; }
 {% if site.plugins contains "jekyll-feed" %}<link rel="alternate" href="{{ site.feed.path | default: "/feed.xml" | relative_url }}" type="application/atom+xml" title="{{ site.title }}">{% endif %}
 </head>
 {% if site.show_sidebar or site.sidebar %}{% include sidebar.html %}{% endif %}
-
 {% if site.navigation %}
   {% assign pages = site.navigation %}
 {% else %}
   {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
 {% endif %}
-
 <header>
   <a href="{{ "/" | relative_url }}" class="title"><img alt="{{ site.title | escape }}" src="{{ "/assets/images/icons/logo.png" | relative_url }}" width="72px"></a>
   {% include menu.html menu=pages %}
 </header>
-
 {{ content }}
-
 {% if site.external %}
 <footer>
   {% include menu.html menu=site.external %}
@@ -86,36 +80,28 @@ function getPreferredColorScheme(){
     systemScheme = 'dark';
   }
   let chosenScheme = systemScheme;
-
   if(localStorage.getItem("scheme")){
     chosenScheme = localStorage.getItem("scheme");
   }
-
   if(systemScheme === chosenScheme){
     localStorage.removeItem("scheme");
   }
-
   return chosenScheme;
 }
-
 // Write chosen color scheme to local storage
 // Unless the system scheme matches the the stored scheme, in which case... remove from local storage
 function savePreferredColorScheme(scheme){
   let systemScheme = 'light';
-
   if(window.matchMedia('(prefers-color-scheme: dark)').matches){
     systemScheme = 'dark';
   }
-
   if(systemScheme === scheme){
     localStorage.removeItem("scheme");
   }
   else {
     localStorage.setItem("scheme", scheme);
   }
-
 }
-
 // Get the current scheme, and apply the opposite
 function toggleColorScheme(){
   let newScheme = "light";
@@ -123,23 +109,15 @@ function toggleColorScheme(){
   if (scheme === "light"){
     newScheme = "dark";
   }
-
   applyPreferredColorScheme(newScheme);
   savePreferredColorScheme(newScheme);
-
-
 }
-
 // Apply the chosen color scheme by traversing stylesheet rules, and applying a medium.
 function applyPreferredColorScheme(scheme) {
     for (var s = 0; s < document.styleSheets.length; s++) {
-
         for (var i = 0; i < document.styleSheets[s].cssRules.length; i++) {
             rule = document.styleSheets[s].cssRules[i];
-
-
             if (rule && rule.media && rule.media.mediaText.includes("prefers-color-scheme")) {
-
                 switch (scheme) {
                     case "light":
                         rule.media.appendMedium("original-prefers-color-scheme");
@@ -159,10 +137,7 @@ function applyPreferredColorScheme(scheme) {
                 }
             }
         }
-
-
     }
-
     // Change the toggle button to be the opposite of the current scheme
     if (scheme === "dark") {
         document.getElementById("icon-sun").style.display = 'inline';
@@ -172,7 +147,6 @@ function applyPreferredColorScheme(scheme) {
         document.getElementById("icon-sun").style.display = 'none';
     }
 }
-
 applyPreferredColorScheme(getPreferredColorScheme());
 </script>
 </html>

@@ -7,7 +7,7 @@
     {%- if item.icon -%}<svg aria-label="{{ title }}" class="icon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ item.icon }}"></use></svg>{%- else -%}{{ title }}{%- endif -%}
   </a>
 {%- endfor -%}
-<a class="thm-tog" href="javascript:toggleColorScheme();">
+<a class="theme-toggle" href="javascript:toggleColorScheme();">
       <span id="icon-sun">🌞</span>
       <span id="icon-moon">🌚</span>
 </a>
