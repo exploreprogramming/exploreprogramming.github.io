@@ -7,10 +7,9 @@
     "display": "standalone",
     "description": "Developer blog sharing ideas and smart solutions to others",
     "icons": [{
-            "src": "/assets/images/icons/icon.svg",
+            "src": "/assets/images/icons/dp.png",
             "sizes": "any",
-            "type": "image/svg+xml",
-            "purpose": "maskable"
+            "type": "image/png"
         },
         {
             "src": "/assets/images/icons/dp.png",
