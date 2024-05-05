@@ -2,7 +2,7 @@
 layout: post
 title: Mastering jQuery AJAX - Effortless Asynchronous Requests
 description: AJAX enables web pages to send and receive data from a server asynchronously, without interfering with the current page's content. This allows for smoother user experiences and dynamic content updates without full page reloads.
-image: /assets/images/photos/ssh.png
+image: /assets/images/photos/jquery-ajax.png
 category: [jquery, ajax, javascript, html]
 date: 2024-05-05 12:10
 ---
