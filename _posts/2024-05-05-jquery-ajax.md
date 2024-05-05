@@ -79,53 +79,7 @@ Here's the HTML code for the button and user info display area:
 <div id="userInfo"></div>
 {% endhighlight %}
 
-When the "Fetch User Data" button is clicked, the AJAX request is made to the GitHub API to fetch information about the user "roomofcode". The response is then displayed on the HTML page.
-
-Full Code Example
-
-{% highlight html %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajax Example | Coding Room</title>
-
-    <!-- Add this script tag to your HTML file to include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-
-<body>
-    <button id="fetchDataBtn">Fetch User Data</button>
-    <div id="userInfo"></div>
-
-    <script>
-        $(document).ready(function() {
-            $("#fetchDataBtn").click(function() {
-                $.ajax({
-                    url: "https://api.github.com/users/roomofcode",
-                    method: "GET",
-                    success: function(response) {
-                        // Display user info on the HTML page
-                        $("#userInfo").html("<p>Name: " + response.name + "</p>" +
-                            "<p>Location: " + response.location + "</p>" +
-                            "<p>Public Repositories: " + response.public_repos + "</p>");
-                    },
-                    error: function(xhr, status, error) {
-                        // Handle error
-                        console.error("Error:", error);
-                    }
-                });
-            });
-        });
-    </script>
-</body>
-
-</html>
-{% endhighlight %}
-
+When the "Fetch User Data" button is clicked, the AJAX request is made to the GitHub API to fetch information about the user "octocat". The response is then displayed on the HTML page.
 Check the <a aria-label="Redirecting user to live project" target="_blank" href="https://roomofcode.github.io/examples/Mastering%20jQuery%20AJAX%20-%20Effortless%20Asynchronous%20Requests/">live project</a> which is uploaded on <a aria-label="Providing project code" target="_blank" href="https://github.com/roomofcode/examples/tree/main/Mastering%20jQuery%20AJAX%20-%20Effortless%20Asynchronous%20Requests">github account</a>.
 
 
