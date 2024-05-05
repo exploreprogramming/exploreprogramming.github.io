@@ -23,6 +23,20 @@ header a, footer a, aside a
 header time
   color: #555558
 
+.more
+  margin: 2em 0 1em
+
+.more a
+  border-radius: 2px
+  border: 1.5px solid $link-color
+  padding: .4em .8em
+  transition: .2s background, .2s color
+
+.more a:hover
+  color: #fff
+  background: $link-color
+  text-decoration: inherit
+
 @media (prefers-color-scheme: dark)
   body
     background: $dark
@@ -32,7 +46,8 @@ header time
   .more a
     border: 1.5px solid $link-color-dark
   .more a:hover
-    background: $link-color-dark
+    background: $link-color
+    border: 1.5px solid $link-color
   header time
     color: $time-dark
 
