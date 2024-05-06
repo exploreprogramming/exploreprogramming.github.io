@@ -50,9 +50,9 @@
     }
 </style>
 <div class="container">
-    <form class="subscribe" id="subscribe-form" action="https://forms.codingroom.in/subscribe/" method="post" style="margin:auto;max-width:500px">
+    <form class="subscribe" id="subscribe-form" action="https://subscribe.codingroom.in/subscribe/" method="post" style="margin:auto;max-width:500px">
         <h3 class="sub">Get my latest articles and updates</h3>
-        <input type="email" id="search-box" placeholder="Enter your email" name="mail" autocomplete="off" required>
+        <input type="email" id="search-box" placeholder="Enter your email" name="email" autocomplete="off" required>
         <button type="submit">Subscribe</button>
         <p class="status-form" id="my-form-status"></p>
     </form>
@@ -66,26 +66,28 @@
         status.innerHTML = "Please wait...";
         status.style.display = 'block';
         var data = new FormData(event.target);
-        console.log(data);
+        data.append('post', window.location.pathname);
         fetch(event.target.action, {
             method: form.method,
             body: data,
             headers: {
                 'Accept': 'application/json'
             }
-        }).then(response => {
+        }).then(response => response.json())
+        .then(response => {
             if (response.ok) {
-                status.innerHTML = "Thanks for your submission!";
+                status.innerHTML = response.msg;
                 form.reset()
             } else {
-                status.innerHTML = "Oops! There was a problem submitting your form"
+                status.innerHTML = response.msg
             }
         }).catch(error => {
-            status.innerHTML = "Oops! There was a problem submitting your form"
+            status.innerHTML = response.msg
         });
+        
         setTimeout(function() {
             status.style.display = 'none';
-        }, 3000);
+        }, 5000);
     }
     form.addEventListener("submit", handleSubmit)
 </script>
