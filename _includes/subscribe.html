@@ -60,6 +60,10 @@
 
 <script>
     var form = document.getElementById("subscribe-form");
+    
+    document.getElementById("my-form-status").addEventListener("click", function(event){
+        this.style.display = 'none';
+    })
     async function handleSubmit(event) {
         event.preventDefault();
         var status = document.getElementById("my-form-status");
@@ -73,18 +77,14 @@
         }).then(response => response.json())
         .then(response => {
             if (response.ok) {
-                status.innerHTML = response.msg;
+                status.innerHTML = response.msg + ". <span style='cursor: pointer;color:red;font-weight:bold;'>Close this.</span>";
                 form.reset()
             } else {
-                status.innerHTML = response.msg
+                status.innerHTML = response.msg + ". <span style='cursor: pointer;color:red;font-weight:bold;'>Close this.</span>";
             }
         }).catch(error => {
-            status.innerHTML = response.msg
+            status.innerHTML = response.msg + ". <span style='cursor: pointer;color:red;font-weight:bold;'>Close this.</span>";
         });
-        
-        setTimeout(function() {
-            status.style.display = 'none';
-        }, 5000);
     }
-    form.addEventListener("submit", handleSubmit)
+    form.addEventListener("submit", handleSubmit);
 </script>
