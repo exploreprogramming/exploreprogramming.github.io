@@ -57,7 +57,7 @@ html {
   {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
 {% endif %}
 <header>
-  <a href="{{ "/" | relative_url }}" class="title"><img alt="{{ site.title | escape }}" src="{{ "/assets/images/icons/logo.png" | relative_url }}" width="72px"></a>
+  <a href="{{ "/" | relative_url }}" class="title"><img class="cr-logo" alt="{{ site.title | escape }}" src="{{ "/assets/images/icons/logo.png" | relative_url }}" width="72px"></a>
   {% include menu.html menu=pages %}
 </header>
 {{ content }}
