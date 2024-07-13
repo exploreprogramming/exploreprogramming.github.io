@@ -19,13 +19,14 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "search.html", icon: search, title: About}
   - {file: "index.html", title: Home}
   - {file: "about.html", title: About}
+  - {url: "/admin/", title: Author}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: thebadalkumar@zohomail.in, icon: envelope, url: "mailto:thebadalkumar@zohomail.in"} #Don't Change this position affect mailing to other pages
-  - {title: Youtube, icon: youtube, url: "https://www.youtube.com/@codingroom_"}
-  - {title: Facebook, icon: facebook, url: "https://www.facebook.com/roomofcode"}
+  # - {title: Youtube, icon: youtube, url: "https://www.youtube.com/@codingroom_"}
+  # - {title: Facebook, icon: facebook, url: "https://www.facebook.com/roomofcode"}
   - {title: Linkedin, icon: linkedin, url: "https://www.linkedin.com/company/roomofcode/"}
-  - {title: Twitter, icon: twitter, url: "https://twitter.com/roomofcode/"}
+  # - {title: Twitter, icon: twitter, url: "https://twitter.com/roomofcode/"}
   - {title: Instagram, icon: instagram, url: "https://www.instagram.com/roomofcode/"}
 
 comments:
