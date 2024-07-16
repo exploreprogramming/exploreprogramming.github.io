@@ -19,7 +19,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "search.html", icon: search, title: About}
   - {file: "index.html", title: Home}
   - {file: "about.html", title: About}
-  - {url: "/admin/", title: Author}
+  - {url: "/badalkumar/", title: Author}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: thebadalkumar@zohomail.in, icon: envelope, url: "mailto:thebadalkumar@zohomail.in"} #Don't Change this position affect mailing to other pages
