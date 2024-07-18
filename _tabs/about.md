@@ -14,7 +14,7 @@ Welcome to **Coding Room**, your premier destination for high-quality coding tut
 
 ## What is Coding Room?
 
-Coding Room is a dedicated platform initiated by [Badal Kumar](/badalkumar/), designed to provide comprehensive coding tutorials and resources for learners of all levels. Our mission is to make coding accessible and enjoyable for everyone, regardless of their background or experience level.
+Coding Room is a dedicated platform initiated and managed by [Badal Kumar](/badalkumar/), designed to provide comprehensive coding tutorials and resources for learners of all levels. Our mission is to make coding accessible and enjoyable for everyone, regardless of their background or experience level.
 
 ## What We Offer
 
