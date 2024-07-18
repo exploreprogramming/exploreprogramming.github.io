@@ -39,19 +39,18 @@
         </li>
         <!-- .nav-item -->
       {% endfor %}
+
+      <li class="nav-item">
+          <a id="mode-toggle" class="nav-link">
+            <i class="fas fa-adjust"></i>
+            <span></span>
+          </a>
+        </li>
+
     </ul>
   </nav>
 
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
-    {% unless site.theme_mode %}
-      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      {% if site.data.contact.size > 0 %}
-        <span class="icon-border"></span>
-      {% endif %}
-    {% endunless %}
 
     {% for entry in site.data.contact %}
       {% case entry.type %}
@@ -97,3 +96,4 @@
   <!-- .sidebar-bottom -->
 </aside>
 <!-- #sidebar -->
+{% include color-switch.html %}

@@ -57,7 +57,7 @@
     }
 
     get mode() {
-      return sessionStorage.getItem(ModeToggle.MODE_KEY);
+      return localStorage.getItem(ModeToggle.MODE_KEY);
     }
 
     {%- comment -%} get the current mode on screen {%- endcomment -%}
@@ -71,17 +71,17 @@
 
     setDark() {
       document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+      localStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
     }
 
     setLight() {
       document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+      localStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
     }
 
     clearMode() {
       document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
-      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+      localStorage.removeItem(ModeToggle.MODE_KEY);
     }
 
     {%- comment -%}
@@ -100,8 +100,10 @@
     flipMode() {
       if (this.hasMode) {
         this.clearMode();
+        document.getElementById("mode-toggle").querySelector("span").innerHTML = "LIGHT MODE";
       } else {
         if (this.isPreferDark) {
+          document.getElementById("mode-toggle").querySelector("span").innerHTML = "DARK MODE";
           this.setLight();
         } else {
           this.setDark();

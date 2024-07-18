@@ -40,7 +40,7 @@
     </nav>
     <!-- endof #breadcrumb -->
 
-    <button type="button" id="sidebar-trigger" class="btn btn-link">
+    <button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="Menu Bar">
       <i class="fas fa-bars fa-fw"></i>
     </button>
 
@@ -55,7 +55,7 @@
       {% endif %}
     </div>
 
-    <button type="button" id="search-trigger" class="btn btn-link">
+    <button type="button" aria-label="Search Buton" id="search-trigger" class="btn btn-link">
       <i class="fas fa-search fa-fw"></i>
     </button>
 
@@ -70,7 +70,7 @@
         placeholder="{{ site.data.locales[include.lang].search.hint | capitalize }}..."
       >
     </search>
-    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">
+    <button type="button" aria-label="Search Cancel" class="btn btn-link text-decoration-none" id="search-cancel">
       {{- site.data.locales[include.lang].search.cancel -}}
     </button>
   </div>
