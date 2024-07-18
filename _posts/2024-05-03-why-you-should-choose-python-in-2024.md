@@ -2,15 +2,16 @@
 layout: post
 title: Why You Should Choose Python in 2024
 description: Python has been steadily gaining popularity over the years, and in 2024, it continues to be one of the top programming languages of choice for developers worldwide. Python's syntax is straightforward and easy to understand, making it an ideal language for beginners.
-image: /assets/images/photos/python-banner.png
-category: [python, programming language]
+author: badal
+category: [python, introduction]
+tag: [python]
 date: 2024-05-03 15:45
+image:
+  path: /assets/images/photos/python.png
+  alt: python
 ---
 
 ## Why Python?
-Python has been steadily gaining popularity over the years, and in 2024, it continues to be one of the top programming languages of choice for developers worldwide. If you're considering which language to learn or use for your next project, here are several compelling reasons why Python should be at the top of your list:
-<!-- Read More -->
-<div style="text-align:center"><img alt="Coding Room" src="/assets/images/photos/python-banner.png" /></div>
 
 ## 1. Beginner-Friendly
 
@@ -18,12 +19,12 @@ Python's syntax is straightforward and easy to understand, making it an ideal la
 
 Let's provide a simple code example to illustrate why Python is beginner-friendly. We'll use a classic "Hello, World!" program, which is often the first program beginners learn in any language:
 
-{% highlight python %}
+```python
 # Hello, World! program in Python
 
 # Print "Hello, World!" to the console
 print("Hello, World!")
-{% endhighlight %}
+```
 
 ## 2. Versatility
 

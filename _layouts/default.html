@@ -1,153 +1,82 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RCJ5X4KE7L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RCJ5X4KE7L');
-</script>
-<link rel="icon" href="{{ "/assets/images/icons/icon.ico" | relative_url }}" type="image/x-icon" />
-<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-<meta charset="{{ site.encoding }}">
-<meta name="theme-color" content="#18181d"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="codingroom, coding room,coding room blog,codingroom blog, coding blog, blog, technical blog, computer blog, programming blog, best blog for programmer, technical blog, networking blog, networking, coding tutorials, software development, web development, mobile app development, data structures, algorithms, artificial intelligence, machine learning, cybersecurity, cloud computing, devops, software engineering, frontend development, backend development, full-stack development, version control, code optimization, programming languages, code debugging, code review, software architecture, tech news, it trends, tech analysis, programming challenges, tech reviews, computer science, it infrastructure, system administration, network security, network protocols, internet of things, iot, data science, big data, blockchain technology, game development, virtual reality, vr, augmented reality, ar, user experience, ux, user interface, ui design, open-source software, tech startups, it careers, remote work, freelancing in tech, coding bootcamps, online learning platforms, tech communities, tech events, tech conferences, tech forums, coding competitions, hackathons, tech gadgets, wearable technology, tech industry insights, tech company updates, tech product launches, tech innovations, tech entrepreneurship, tech investments, tech policy, tech ethics, tech education, tech resources, tech podcasts, tech videos, tech documentaries, tech interviews, tech webinars, tech courses, tech certifications, tech books, tech forums, tech communities, tech influencers, tech thought leaders, tech consulting, tech solutions, tech services, tech support, tech troubleshooting, tech tips, tech hacks, tech productivity, tech trends, tech predictions, tech analysis, tech insights, tech best practices, tech case studies, tech success stories, tech failures, tech retrospectives, tech future, tech impact, tech sustainability, tech for social good, tech for healthcare, tech for education, tech for environment, tech for development, tech for business, tech for government, tech for entertainment, tech for communication, tech for transportation, tech for agriculture, tech for manufacturing, tech for finance, tech for retail, tech for logistics, tech for energy, tech for construction, tech for real estate, tech for tourism, tech for sports, tech for media, tech for marketing, tech for advertising, tech for fashion, tech for food, tech for lifestyle, tech for parenting, tech for personal development, tech for self-improvement, tech for mental health, tech for wellbeing, tech for relationships, tech for spirituality, tech for hobbies, tech for creativity, tech for accessibility, tech for aging population, tech for inclusivity, tech for diversity, tech for equality, tech for justice, tech for democracy, tech for human rights, tech for peace, tech for global cooperation, tech for space exploration, tech for colonization, tech for extraterrestrial life, tech for science fiction, tech for fantasy, tech for imagination, tech for dreams, tech for exploration, tech for discovery, tech for innovation, tech for evolution, tech for revolution, tech for transformation, tech for progress, tech for the future">
-{% seo %}
-<link rel="manifest" href="/manifest.json">
-{% if site.show_frame %}
-<link async rel="stylesheet" href="{{ "/assets/css/frame.css" | relative_url }}">
-{% else %}
-<link async rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
+---
+layout: compress
+---
+
+<!doctype html>
+
+{% include origin-type.html %}
+
+{% include lang.html %}
+
+{% if site.theme_mode %}
+  {% capture prefer_mode %}data-mode="{{ site.theme_mode }}"{% endcapture %}
 {% endif %}
-<style>
-*{
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-}
-.theme-toggle:hover{
-  text-decoration: none;
-}
-#icon-sun {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: none;
-}
-#icon-moon {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: none;
-}
-.new-f{
-  padding-top: 0px;
-  padding-bottom: 10px;
-  box-shadow: 0 0 0 0;
-}
-</style>
-{% if site.plugins contains "jekyll-feed" %}<link rel="alternate" href="{{ site.feed.path | default: "/feed.xml" | relative_url }}" type="application/atom+xml" title="{{ site.title }}">{% endif %}
-</head>
-{% if site.show_sidebar or site.sidebar %}{% include sidebar.html %}{% endif %}
-{% if site.navigation %}
-  {% assign pages = site.navigation %}
-{% else %}
-  {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
-{% endif %}
-<header>
-  <a href="{{ "/" | relative_url }}" class="title"><img class="cr-logo" alt="{{ site.title | escape }}" src="{{ "/assets/images/icons/logo.png" | relative_url }}" width="72px"></a>
-  {% include menu.html menu=pages %}
-</header>
-{{ content }}
-{% if site.external %}
-<footer>
-  {% include menu.html menu=site.external %}
-</footer>
-{% endif %}
-<footer class="new-f">
-  <div>{{ site.title }}</div>
-  <nav>
-  <a href="/privacy/">Privacy</a>
-  <a href="/about/">About</a>
-  <a href="/badalkumar/">Author</a>
-  </nav>
-</footer>
-<script>
-function getPreferredColorScheme(){
-  let systemScheme = 'light';
-  if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-    systemScheme = 'dark';
-  }
-  let chosenScheme = systemScheme;
-  if(localStorage.getItem("scheme")){
-    chosenScheme = localStorage.getItem("scheme");
-  }
-  if(systemScheme === chosenScheme){
-    localStorage.removeItem("scheme");
-  }
-  return chosenScheme;
-}
-// Write chosen color scheme to local storage
-// Unless the system scheme matches the the stored scheme, in which case... remove from local storage
-function savePreferredColorScheme(scheme){
-  let systemScheme = 'light';
-  if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-    systemScheme = 'dark';
-  }
-  if(systemScheme === scheme){
-    localStorage.removeItem("scheme");
-  }
-  else {
-    localStorage.setItem("scheme", scheme);
-  }
-}
-// Get the current scheme, and apply the opposite
-function toggleColorScheme(){
-  let newScheme = "light";
-  let scheme = getPreferredColorScheme();
-  if (scheme === "light"){
-    newScheme = "dark";
-  }
-  applyPreferredColorScheme(newScheme);
-  savePreferredColorScheme(newScheme);
-}
-// Apply the chosen color scheme by traversing stylesheet rules, and applying a medium.
-function applyPreferredColorScheme(scheme) {
-    for (var s = 0; s < document.styleSheets.length; s++) {
-        for (var i = 0; i < document.styleSheets[s].cssRules.length; i++) {
-            rule = document.styleSheets[s].cssRules[i];
-            if (rule && rule.media && rule.media.mediaText.includes("prefers-color-scheme")) {
-                switch (scheme) {
-                    case "light":
-                        rule.media.appendMedium("original-prefers-color-scheme");
-                        if (rule.media.mediaText.includes("light")) rule.media.deleteMedium("(prefers-color-scheme: light)");
-                        if (rule.media.mediaText.includes("dark")) rule.media.deleteMedium("(prefers-color-scheme: dark)");
-                        break;
-                    case "dark":
-                        rule.media.appendMedium("(prefers-color-scheme: light)");
-                        rule.media.appendMedium("(prefers-color-scheme: dark)");
-                        if (rule.media.mediaText.includes("original")) rule.media.deleteMedium("original-prefers-color-scheme");
-                        break;
-                    default:
-                        rule.media.appendMedium("(prefers-color-scheme: dark)");
-                        if (rule.media.mediaText.includes("light")) rule.media.deleteMedium("(prefers-color-scheme: light)");
-                        if (rule.media.mediaText.includes("original")) rule.media.deleteMedium("original-prefers-color-scheme");
-                        break;
-                }
-            }
-        }
-    }
-    // Change the toggle button to be the opposite of the current scheme
-    if (scheme === "dark") {
-        document.getElementById("icon-sun").style.display = 'inline';
-        document.getElementById("icon-moon").style.display = 'none';
-    } else {
-        document.getElementById("icon-moon").style.display = 'inline';
-        document.getElementById("icon-sun").style.display = 'none';
-    }
-}
-applyPreferredColorScheme(getPreferredColorScheme());
-</script>
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
+  {% include head.html %}
+
+  <body>
+    {% include sidebar.html lang=lang %}
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        {% include topbar.html lang=lang %}
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% if layout.refactor or layout.layout == 'default' %}
+              {% include refactor-content.html content=content lang=lang %}
+            {% else %}
+              {{ content }}
+            {% endif %}
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
+            <div class="access">
+              {% include_cached update-list.html lang=lang %}
+              {% include_cached trending-tags.html lang=lang %}
+            </div>
+
+            {% for _include in layout.panel_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% for _include in layout.tail_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+
+            {% include_cached footer.html lang=lang %}
+          </div>
+        </div>
+
+        {% include_cached search-results.html lang=lang %}
+      </div>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
+    </div>
+
+    <div id="mask"></div>
+
+    {% if site.pwa.enabled %}
+      {% include_cached notification.html lang=lang %}
+    {% endif %}
+
+    <!-- JavaScripts -->
+    {% include js-selector.html lang=lang %}
+
+    {% include_cached search-loader.html lang=lang %}
+  </body>
 </html>

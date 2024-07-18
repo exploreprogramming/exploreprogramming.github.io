@@ -2,31 +2,29 @@
 layout: post
 title: Mastering jQuery AJAX - Effortless Asynchronous Requests
 description: AJAX enables web pages to send and receive data from a server asynchronously, without interfering with the current page's content. This allows for smoother user experiences and dynamic content updates without full page reloads.
-image: /assets/images/photos/jquery-ajax.png
-category: [jquery, ajax, javascript, html]
+author: badal
+category: [javascript, jquery]
+tag: [ajax, html, javascript, jquery]
 date: 2024-05-05 12:10
+image:
+  path: /assets/images/photos/jquery.png
+  alt: jquery
 ---
 
 In today's web development landscape, making asynchronous requests is essential for creating dynamic and interactive web applications. jQuery simplifies this process with its AJAX (Asynchronous JavaScript and XML) capabilities, offering developers a straightforward way to perform HTTP requests and handle responses seamlessly.
-
-## Understanding AJAX
-
-AJAX enables web pages to send and receive data from a server asynchronously, without interfering with the current page's content. This allows for smoother user experiences and dynamic content updates without full page reloads.
-
-<div style="text-align:center"><img alt="Coding Room" src="/assets/images/photos/jquery-ajax.png" /></div>
 
 ## Getting Started with jQuery AJAX
 
 To make an AJAX request in jQuery, you need to include the jQuery library in your HTML file. You can do this by adding a `<script>` tag that links to the jQuery CDN (Content Delivery Network). Here's how:
 
-{% highlight html %}
+```html
 <!-- Add this script tag to your HTML file to include jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-{% endhighlight %}
+```
 
 Once jQuery is included, you can use the `$.ajax()` method to make AJAX requests. Here's a basic example:
 
-{% highlight javascript %}
+```js
 $.ajax({
     url: "/api/data",
     method: "GET",
@@ -39,7 +37,7 @@ $.ajax({
         console.error("Error:", error);
     }
 });
-{% endhighlight %}
+```
 
 In this example:
 - `url`: Specifies the URL to which the request is sent.
@@ -51,7 +49,7 @@ In this example:
 
 Let's make a request to a third-party API, such as the GitHub API, to fetch information about a user. We'll display the information on an HTML page upon clicking a button:
 
-{% highlight javascript %}
+```js
 $(document).ready(function() {
     $("#fetchDataBtn").click(function() {
         $.ajax({
@@ -70,20 +68,20 @@ $(document).ready(function() {
         });
     });
 });
-{% endhighlight %}
+```
 
 Here's the HTML code for the button and user info display area:
 
-{% highlight html %}
+```html
 <button id="fetchDataBtn">Fetch User Data</button>
 <div id="userInfo"></div>
-{% endhighlight %}
+```
 
 When the "Fetch User Data" button is clicked, the AJAX request is made to the GitHub API to fetch information about the user "roomofcode". The response is then displayed on the HTML page.
 
 Full Code Example
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,7 +122,7 @@ Full Code Example
 </body>
 
 </html>
-{% endhighlight %}
+```
 
 Check the <a aria-label="Redirecting user to live project" target="_blank" href="https://roomofcode.github.io/examples/Mastering%20jQuery%20AJAX%20-%20Effortless%20Asynchronous%20Requests/">live project</a> which is uploaded on <a aria-label="Providing project code" target="_blank" href="https://github.com/roomofcode/examples/tree/main/Mastering%20jQuery%20AJAX%20-%20Effortless%20Asynchronous%20Requests">github account</a>.
 
@@ -138,7 +136,7 @@ jQuery AJAX methods support various callbacks to handle different stages of the 
 - `error`: Executed if the request fails.
 - `complete`: Executed when the request finishes, regardless of success or failure.
 
-{% highlight javascript %}
+```js
 $.ajax({
     url: "/api/data",
     method: "GET",
@@ -155,7 +153,7 @@ $.ajax({
         console.log("Request completed.");
     }
 });
-{% endhighlight %}
+```
 
 ## Tips for Using jQuery AJAX
 

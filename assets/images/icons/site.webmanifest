@@ -1,0 +1,38 @@
+---
+layout: compress
+---
+
+{% assign favicon_path = "/assets/images/icons" | relative_url %}
+
+{
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "icons": [{
+            "src": "/assets/images/icons/dp.png",
+            "sizes": "any",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/icons/dp.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/assets/images/icons/dp.png",
+            "sizes": "500x500",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/assets/images/icons/dp.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }],
+  "start_url": "{{ '/index.html' | relative_url }}",
+  "theme_color": "#2a1e6b",
+  "background_color": "#ffffff",
+  "display": "fullscreen"
+}

@@ -2,18 +2,17 @@
 layout: post
 title: Mastering SSH from Beginner to Advanced
 description: Welcome to our comprehensive guide to SSH! Whether you’re just starting out or looking to delve into advanced techniques, this post has you covered. We’ll cover everything from basic installation to advanced port configurations.
-image: /assets/images/photos/ssh.png
-category: [linux, ssh, shell]
+author: badal
+category: [linux, shell]
+tag: [ssh]
 date: 2024-05-04 11:04
+image:
+  path: /assets/images/photos/ssh.png
+  alt: ssh
 ---
-
-Welcome to our comprehensive guide to SSH! Whether you're just starting out or looking to delve into advanced techniques, this post has you covered. We'll cover everything from basic installation to advanced port configurations.
-<!-- Read More -->
 ## What is SSH?
 
 SSH, or Secure Shell, is a cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network services between two networked computers.
-
-<div style="text-align:center"><img alt="Coding Room" src="/assets/images/photos/ssh.png" /></div>
 
 ## Installation
 
@@ -21,9 +20,9 @@ SSH, or Secure Shell, is a cryptographic network protocol for secure data commun
 
 SSH is typically pre-installed on most Linux and macOS distributions. You can verify if it's installed by opening a terminal and typing:
 
-{% highlight bash %}
+```bash
 ssh -V
-{% endhighlight %}
+```
 
 If SSH is installed, you'll see the version information; otherwise, you'll need to install it using your package manager.
 
@@ -35,9 +34,9 @@ For Windows users, you can use third-party software like PuTTY or install Window
 
 To connect to a remote server via SSH, use the following command:
 
-{% highlight bash %}
+```bash
 ssh username@remote_host
-{% endhighlight %}
+```
 
 Replace `username` with your username on the remote server and `remote_host` with the server's IP address or domain name.
 
@@ -47,9 +46,9 @@ By default, SSH uses port <b>22</b> for connections. However, in some cases, you
 
 To specify a different port when connecting via SSH, use the `-p` option followed by the port number:
 
-{% highlight bash %}
+```bash
 ssh -p <port_number> username@remote_host
-{% endhighlight %}
+```
 
 ## Advanced Techniques
 
@@ -59,9 +58,9 @@ SSH supports tunneling and port forwarding, allowing you to securely route traff
 
 To set up port forwarding, use the `-L` option followed by the local port, remote host, and remote port:
 
-{% highlight bash %}
+```bash
 ssh -L <local_port>:<remote_host>:<remote_port> username@remote_host
-{% endhighlight %}
+```
 
 ### ProxyJump
 
@@ -69,9 +68,9 @@ The `ProxyJump` option allows you to connect to a remote server through one or m
 
 To use `ProxyJump`, specify the intermediate host(s) using the `-J` option:
 
-{% highlight bash %}
+```bash
 ssh -J intermediate_host username@remote_host
-{% endhighlight %}
+```
 
 ## Conclusion
 

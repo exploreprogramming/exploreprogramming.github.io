@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2.0"
-gem "webrick"
-gem "jekyll-paginate"
-gem 'jekyll-seo-tag'
-gem 'jekyll-sitemap'
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+gem "jekyll-theme-chirpy", "~> 7.0", ">= 7.0.1"
+
+group :test do
+  gem "html-proofer", "~> 5.0"
+  gem "tzinfo-data"
 end
