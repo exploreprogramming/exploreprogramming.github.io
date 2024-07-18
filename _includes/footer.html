@@ -16,32 +16,11 @@
     {% else %}
       <em class="fst-normal">{{ site.social.name }}</em>.
     {% endif %}
-
-    {% if site.data.locales[include.lang].copyright.brief %}
-      <span
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="{{ site.data.locales[include.lang].copyright.verbose }}"
-      >
-        {{- site.data.locales[include.lang].copyright.brief -}}
-      </span>
-    {% endif %}
   </p>
 
   <p>
     {%- capture _platform -%}
       <a href="https://jekyllrb.com" target="_blank" rel="noopener">Badal Kumar</a>
-    {%- endcapture -%}
-
-    {%- capture _theme -%}
-      <a
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="v{{ theme.version }}"
-        href="https://github.com/cotes2020/jekyll-theme-chirpy"
-        target="_blank"
-        rel="noopener"
-      >Coding Room</a>
     {%- endcapture -%}
 
     {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
