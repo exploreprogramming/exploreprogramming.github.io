@@ -292,7 +292,7 @@
 	{%- endcomment -%}
 	function loadMoreComments(isLoadMoreAction) {
 		{%- if chunked_loading_enabled  -%}
-			var newCommentsToDisplay = hiddenComments.slice(-1);
+			var newCommentsToDisplay = hiddenComments.slice(-5);
 		{%- else -%}
 			var newCommentsToDisplay = hiddenComments;
 		{%- endif -%}
