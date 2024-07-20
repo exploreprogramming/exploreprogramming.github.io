@@ -8,7 +8,7 @@ tag: [python]
 date: 2024-05-03 15:45
 image:
   path: /assets/images/photos/python.png
-  alt: python
+  alt: Python Programming
 ---
 
 ## Why Python?

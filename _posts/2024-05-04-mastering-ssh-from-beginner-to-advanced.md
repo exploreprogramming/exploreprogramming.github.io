@@ -8,7 +8,7 @@ tag: [ssh]
 date: 2024-05-04 11:04
 image:
   path: /assets/images/photos/ssh.png
-  alt: ssh
+  alt: Secure Shell
 ---
 ## What is SSH?
 

@@ -8,7 +8,7 @@ tag: [ajax, html, javascript, jquery]
 date: 2024-05-05 12:10
 image:
   path: /assets/images/photos/jquery.png
-  alt: jquery
+  alt: jquery Library
 ---
 
 In today's web development landscape, making asynchronous requests is essential for creating dynamic and interactive web applications. jQuery simplifies this process with its AJAX (Asynchronous JavaScript and XML) capabilities, offering developers a straightforward way to perform HTTP requests and handle responses seamlessly.

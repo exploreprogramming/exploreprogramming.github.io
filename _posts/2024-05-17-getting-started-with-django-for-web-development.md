@@ -3,15 +3,13 @@ title: Getting Started with Django for Web Development
 description: >-
   Django, a high-level Python web framework, is designed to help developers build robust and scalable web applications quickly. Django has become a popular choice among developers worldwide.
 author: badal
-categories: [python, django]
+categories: [python]
 tags: [django]
-pin: true
 comments: true
-mermaid: true
 date: 2024-06-09 11:33:00
 image:
   path: /assets/images/photos/django.png
-  alt: Django
+  alt: Django Framework
 ---
 
 In the ever-evolving landscape of web development, choosing the right framework can significantly impact the efficiency and scalability of your projects. Django, a high-level Python web framework, is designed to help developers build robust and scalable web applications quickly.
