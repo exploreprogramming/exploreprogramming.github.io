@@ -43,7 +43,7 @@ Just paste your public profile URL here in this webpage: [https://arcade.codingr
 
 ## Demo
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7227780808118312960?compact=1" height="500" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7227780808118312960?compact=1" height="400" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 Whether you're a seasoned Google Cloud enthusiast or just starting your journey, I hope this tool proves to be valuable in your quest for knowledge and rewards.
 
