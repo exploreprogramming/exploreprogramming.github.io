@@ -3,7 +3,6 @@ title: Google Arcade Points Calculator
 description: >-
   The Arcade Facilitator Program is an always-on, no-cost gaming campaign where technical practitioners of all levels can learn new cloud and earn digital badges &amp; points to use towards claiming swag prizes and Google Cloud goodies.
 author: badal
-categories: [Google Cloud Skill Boost]
 tags: [google cloud skills, google arcade, arcade facilitator program]
 mermaid: true
 comments: true

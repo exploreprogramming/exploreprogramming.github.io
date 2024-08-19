@@ -1,10 +1,10 @@
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
+permalink: /about/
+layout: page
 image:
   path: /assets/images/photos/about.png
   alt: about
+sitemap: true
 ---
 
 Welcome to **Coding Room**, your premier destination for high-quality coding tutorials and resources. Whether you’re a beginner just starting your coding journey or an experienced developer looking to expand your skills, Coding Room has everything you need to succeed.

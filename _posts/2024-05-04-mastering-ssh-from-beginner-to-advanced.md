@@ -3,7 +3,6 @@ layout: post
 title: Mastering SSH from Beginner to Advanced
 description: Welcome to our comprehensive guide to SSH! Whether you’re just starting out or looking to delve into advanced techniques, this post has you covered. We’ll cover everything from basic installation to advanced port configurations.
 author: badal
-category: [linux, shell]
 tag: [ssh]
 date: 2024-05-04 11:04
 image:

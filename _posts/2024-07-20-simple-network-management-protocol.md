@@ -3,7 +3,6 @@ title: Simple Network Management Protocol (SNMP) - A Comprehensive Guide
 description: >-
   Simple Network Management Protocol (SNMP) is a widely used protocol for network management. It allows network administrators to manage network performance, find and solve network problems, and plan for network growth. This blog aims to provide a detailed, yet easy-to-understand guide on SNMP, covering its architecture, components, versions, practical applications, and examples of using SNMP in a terminal.
 author: badal
-categories: [Networking, SNMP]
 tags: [snmp]
 mermaid: true
 comments: true

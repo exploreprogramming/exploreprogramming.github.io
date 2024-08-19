@@ -8,7 +8,7 @@
 
 - type: linkedin
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-  url:  'https://www.linkedin.com/company/roomofcode/'                  # Fill with your Linkedin homepage
+  url:  'https://www.linkedin.com/in/thebadalkumar/'                  # Fill with your Linkedin homepage
   noblank: true
 
 - type: instagram
@@ -16,9 +16,9 @@
   url:  'https://www.instagram.com/roomofcode/'                  # Fill with your Instagram homepage
   noblank: true
 
-- type: telegram
-  icon: 'fab fa-telegram'   # icons powered by <https://fontawesome.com/>
-  url:  'https://t.me/roomofcode/'                  # Fill with your Telegram homepage
+- type: whatsapp
+  icon: 'fab fa-whatsapp'   # icons powered by <https://fontawesome.com/>
+  url:  'https://chat.whatsapp.com/GSe9o1qcMlpJHvp9NyWmg7'                  # Fill with your whatsapp homepage
   noblank: true
 
 - type: email

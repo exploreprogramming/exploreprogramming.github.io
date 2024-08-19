@@ -196,13 +196,11 @@ exclude:
   - package*.json
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [tags]
   layouts:
-    category: category
     tag: tag
   permalinks:
     tag: /tags/:name/
-    category: /categories/:name/
 
 comment-post: https://docs.google.com/forms/d/e/1FAIpQLSe33yu4yo5scBlOijbfPIrfp5u6VyE7WAFd-wtYJP0gbe1rKw
 
