@@ -13,7 +13,7 @@
 
 - type: instagram
   icon: 'fab fa-instagram'   # icons powered by <https://fontawesome.com/>
-  url:  'https://www.instagram.com/roomofcode/'                  # Fill with your Instagram homepage
+  url:  'https://www.instagram.com/codewithbadal_/'                  # Fill with your Instagram homepage
   noblank: true
 
 - type: whatsapp
